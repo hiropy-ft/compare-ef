@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.figures ul {
+  list-style: none;
+  padding: 0;
+}
+.figures li {
+  display: inline;
+}
+.figures img {
+  width: 400px;
+}
+</style>
+<script>
+  function handleSliderFirst(val) {
+    target = document.getElementById('output1')
+    // console.log(Math.round(((val / 1000) - 0.1) * 1000) / 1000)
+    ef = Math.round(((val / 1000) - 0.1) * 1000) / 1000
+    target.value = ef
+    document.getElementById("sigma_first").src = "sigma_anim/" + ("000" + val ).slice( -3 ) + ".gif"
+    document.getElementById("alpha_first").src = "alpha_anim/" + ("000" + val ).slice( -3 ) + ".gif"
+    document.getElementById("alphaovt_first").src = "alphaovt_anim/" + ("000" + val ).slice( -3 ) + ".gif"
+  }
+</script>
+</head>
+<body>
+<h1>CoMnSb renormalize=1</h1>
+<div class="figures">
+  <input type="range" value="0" min="0" max="200" step="1" oninput="handleSliderFirst(this.value)">
+  <output id="output1">-0.1</output>
+  <ul>
+    <li><img id="sigma_first" src="sigma_anim/000.gif" /></li>
+    <li><img id="alpha_first" src="alpha_anim/000.gif" /></li>
+    <li><img id="alphaovt_first" src="alphaovt_anim/000.gif" /></li>
+  </ul>
+</div>
+</body>
+</html>
