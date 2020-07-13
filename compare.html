@@ -18,17 +18,9 @@
     target = document.getElementById('output1')
     ef = Math.round(((val / 1000) - 0.1) * 1000) / 1000
     target.value = ef
-    document.getElementById("sigma_first").src = "sigma_anim/" + ("000" + val ).slice( -3 ) + ".gif"
-    document.getElementById("alpha_first").src = "alpha_anim/" + ("000" + val ).slice( -3 ) + ".gif"
-    document.getElementById("alphaovt_first").src = "alphaovt_anim/" + ("000" + val ).slice( -3 ) + ".gif"
-  }
-  function handleSliderSecond(val) {
-    target = document.getElementById('output2')
-    ef = Math.round(((val / 1000) - 0.1) * 1000) / 1000
-    target.value = ef
-    document.getElementById("sigma_first_inv").src = "sigma_anim_inv/" + ("000" + val ).slice( -3 ) + ".gif"
-    document.getElementById("alpha_first_inv").src = "alpha_anim_inv/" + ("000" + val ).slice( -3 ) + ".gif"
-    document.getElementById("alphaovt_first_inv").src = "alphaovt_anim_inv/" + ("000" + val ).slice( -3 ) + ".gif"
+    document.getElementById("sigma_first").src = "sigma_anim_double/" + ("000" + val ).slice( -3 ) + ".gif"
+    document.getElementById("alpha_first").src = "alpha_anim_double/" + ("000" + val ).slice( -3 ) + ".gif"
+    document.getElementById("alphaovt_first").src = "alphaovt_anim_double/" + ("000" + val ).slice( -3 ) + ".gif"
   }
 </script>
 </head>
@@ -38,19 +30,9 @@
   <input type="range" value="0" min="0" max="200" step="1" oninput="handleSliderFirst(this.value)">
   <output id="output1">-0.1</output>
   <ul>
-    <li><img id="sigma_first" src="sigma_anim/000.gif" /></li>
-    <li><img id="alpha_first" src="alpha_anim/000.gif" /></li>
-    <li><img id="alphaovt_first" src="alphaovt_anim/000.gif" /></li>
-  </ul>
-</div>
-<h1>CoMnSb experiment data sign inversed renormalize=1</h1>
-<div class="figures">
-  <input type="range" value="0" min="0" max="200" step="1" oninput="handleSliderSecond(this.value)">
-  <output id="output2">-0.1</output>
-  <ul>
-    <li><img id="sigma_first_inv" src="sigma_anim_inv/000.gif" /></li>
-    <li><img id="alpha_first_inv" src="alpha_anim_inv/000.gif" /></li>
-    <li><img id="alphaovt_first_inv" src="alphaovt_anim_inv/000.gif" /></li>
+    <li><img id="sigma_first" src="sigma_anim_double/000.gif" /></li>
+    <li><img id="alpha_first" src="alpha_anim_double/000.gif" /></li>
+    <li><img id="alphaovt_first" src="alphaovt_anim_double/000.gif" /></li>
   </ul>
 </div>
 </body>
