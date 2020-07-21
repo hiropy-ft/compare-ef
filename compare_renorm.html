@@ -16,7 +16,7 @@
 <script>
   function handleSliderFirst(val) {
     target = document.getElementById('output1')
-    ef = Math.round(((val / 1000) - 0.15) * 1000) / 1000
+    ef = Math.round(((3 * val / 4000) - 0.15) * 1000) / 1000
     target.value = ef
     document.getElementById("sigma_first").src = "sigma_renorm_pngs/" + ("000" + val ).slice( -3 ) + ".png"
     document.getElementById("alpha_first").src = "alpha_renorm_pngs/" + ("000" + val ).slice( -3 ) + ".png"
@@ -28,7 +28,7 @@
 <h1>CoMnSb renormalize=3.1</h1>
 <div class="figures">
   <input type="range" value="0" min="0" max="400" step="1" oninput="handleSliderFirst(this.value)">
-  <output id="output1">-0.1</output>
+  <output id="output1">-0.15</output>
   <ul>
     <li><img id="sigma_first" src="sigma_renorm_pngs/000.png" /></li>
     <li><img id="alpha_first" src="alpha_renorm_pngs/000.png" /></li>
